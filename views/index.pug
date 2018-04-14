@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+	head
+		title App with Google Authorization
+	style
+	include ../css/style.css
+	body
+		#container.col
+			h1 App with Google Authorization
+			h2 Please enter login and password
+			form(action='http://localhost:3000/auth/google', method='GET')
+				p.login
+					| Enter login 
+					input.text(type='text', name='login')
+				p.password
+					| Enter password 
+					input.text(type='text', name='password')
+				input.button(type='submit', value='Submit')
+
